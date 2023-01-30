@@ -1,0 +1,91 @@
+/* Main Body */
+@page {
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  margin-left: 1cm;
+  margin-right: 1cm;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: sans-serif;
+  /* padding: 1rem; */
+  border: 2px solid black;
+  line-height: 1.3;
+  /* min-height: 15in;
+  height: 15in; */
+}
+table {
+  width: 100%;
+  margin-bottom: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.logo,
+.logo img {
+  max-width: 120px;
+}
+
+.title {
+  margin: 0;
+  margin-top: auto;
+}
+
+.subtitle {
+  font-size: 0.9em;
+}
+
+.cin {
+  text-align: right;
+  vertical-align: top;
+}
+
+.meta td {
+  width: 33%;
+}
+
+.label {
+  background-color: orangered;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.meta .details {
+  text-align: right;
+}
+
+.donation {
+  margin: 0.3rem;
+  /* margin-inline: auto; */
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.4em;
+}
+table.donation {
+  margin-bottom: 1.5rem;
+}
+.donation span {
+  font-weight: bold;
+}
+
+.underline > span {
+  text-decoration: underline;
+  line-height: 2;
+}
+
+.footer {
+  font-size: 0.8rem;
+}
+
+.footer .logo {
+  margin-left: auto;
+}
+
+.footer .logo img {
+  max-width: 70px;
+}

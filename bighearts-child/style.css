@@ -1,0 +1,157 @@
+/*
+Theme Name: BigHearts Child
+Author: WebGeniusLab
+Author URI: http://webgeniuslab.net
+Description: -
+Version: 1.0
+Template: bighearts
+Text Domain: bighearts-child
+*/
+
+/* Donations progress goal card styles */
+ul.wgl-products li.product_cat-donations:hover a.button,
+ul.wgl-products li.product_cat-donations a.button.loading {
+  opacity: 0;
+  visibility: hidden;
+}
+ul.wgl-products li.product_cat-donations .price {
+  display: none;
+}
+.progress__bar {
+  height: 8px;
+  margin-top: 42px;
+  border-radius: 5px;
+  background-color: #eaeaea;
+}
+.bar__container {
+  position: relative;
+  height: inherit;
+  border-radius: inherit;
+  background-color: var(--bighearts-primary-color);
+}
+.bar__container:after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: inherit;
+}
+.bar__container[style*='0%'] .bar__label {
+  right: -7px;
+}
+.bar__container[style*='1%'] .bar__label {
+  right: -6px;
+}
+.bar__container[style*='2%'] .bar__label {
+  right: -5px;
+}
+.bar__container[style*='3%'] .bar__label {
+  right: -4px;
+}
+.bar__container[style*='4%'] .bar__label {
+  right: -3px;
+}
+.bar__container[style*='5%'] .bar__label {
+  right: -2px;
+}
+.bar__container[style*='95%'] .bar__label {
+  right: 5px;
+}
+.bar__container[style*='96%'] .bar__label {
+  right: 6px;
+}
+.bar__container[style*='97%'] .bar__label {
+  right: 7px;
+}
+.bar__container[style*='98%'] .bar__label {
+  right: 8px;
+}
+.bar__container[style*='99%'] .bar__label {
+  right: 9px;
+}
+.bar__container[style*='100%'] .bar__label {
+  right: 10px;
+}
+.bar__label {
+  position: absolute;
+  bottom: 100%;
+  right: -2px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1;
+  transform: translateX(60%);
+  color: var(--bighearts-header-font-color);
+  font-family: var(--bighearts-header-font-family);
+  font-weight: var(--bighearts-header-font-weight);
+}
+.progress__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: var(--bighearts-header-font-color);
+  font-family: var(--bighearts-header-font-family);
+  font-weight: var(--bighearts-header-font-weight);
+}
+.progress__stats > :nth-child(2) {
+  width: 46%;
+}
+.progress__stats > :nth-child(2) > div:before,
+.progress__stats > :nth-child(2) > div:after,
+.progress__stats > :nth-child(2) > span:before,
+.progress__stats > :nth-child(2) > span:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+.progress__stats > :nth-child(2) > div:before,
+.progress__stats > :nth-child(2) > span:before {
+  left: 0%;
+}
+.progress__stats > :nth-child(2) > div:after,
+.progress__stats > :nth-child(2) > span:after {
+  right: 0%;
+}
+.progress__stats .stats__info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  line-height: 1.2;
+}
+.progress__stats .stats__info--aligned {
+  display: inline-flex;
+  flex-direction: column;
+  margin: auto;
+}
+.progress__stats .stats__info .stats__label {
+  margin-bottom: 5px;
+}
+
+.stats__goal .stats__value {
+  color: var(--bighearts-primary-color);
+}
+.stats__lack .stats__value {
+  color: var(--bighearts-secondary-color);
+}
+
+/* Hide Shiprocket pincode, quantity, product-meta, reviews, cart in header, & add to cart(archive) for virtual products used for donations */
+
+.single-product .product.virtual .summary > div:first-of-type,
+.single-product .product.virtual .summary > form.cart .quantity,
+.single-product .product.virtual .summary .product_meta,
+.single-product .product.virtual ul.tabs li.reviews_tab,
+body:has(.product.product_cat-donations) .elementor-widget-wgl-header-cart,
+ul.wgl-products
+  li.product_cat-donations
+  .woo_product_image
+  a.add_to_cart_button {
+  display: none;
+}
